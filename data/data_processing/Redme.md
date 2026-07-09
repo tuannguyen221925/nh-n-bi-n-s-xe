@@ -1,0 +1,1 @@
+Ảnh vùng biển số đã cắt/xoay (Nhóm 3 lưu vào nếu cần)

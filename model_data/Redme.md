@@ -1,0 +1,1 @@
+Nơi lưu dữ liệu huấn luyện KNN (Nhóm 4 quản lý)

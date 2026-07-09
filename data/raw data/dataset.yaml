@@ -1,0 +1,5 @@
+train: TongHop\YOLODataset/images/train/
+val: TongHop\YOLODataset/images/val/
+test: TongHop\YOLODataset/images/test/
+nc: 2
+names: ['BSD', 'BSV']

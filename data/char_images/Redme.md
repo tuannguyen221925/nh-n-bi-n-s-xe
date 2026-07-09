@@ -1,0 +1,1 @@
+Các kí tự đơn lẻ 20x30 đã cắt (Nhóm 3 lưu ra)
