@@ -13,5 +13,3 @@
 └── 04_Train_KNN_va_Nhan_dien.ipynb       <-- Nhóm 4 làm file này
 └── 02_Khử nhiễu.ipynb                    <-- Nhóm 2 làm file này
 
-
-
