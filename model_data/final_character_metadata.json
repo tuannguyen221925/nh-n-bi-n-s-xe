@@ -1,0 +1,66 @@
+{
+  "pipeline": "HOG + KNN",
+  "feature": "HOG6",
+  "feature_family": "HOG",
+  "feature_dim": 360,
+  "model": "KNN",
+  "augmentation": true,
+  "params_text": "K=3",
+  "k": 3,
+  "C": null,
+  "gamma": null,
+  "char_size": [
+    20,
+    30
+  ],
+  "blur_kernel": 3,
+  "cv_seeds": [
+    7,
+    21,
+    42,
+    84,
+    99
+  ],
+  "final_test_seed": 2026,
+  "validation_mean_macro_f1": 0.9833333333333334,
+  "validation_std_macro_f1": 0.0,
+  "final_test_accuracy": 0.9130434782608695,
+  "final_test_macro_f1": 0.9523809523809524,
+  "final_test_class_coverage": 0.6842105263157895,
+  "dataset_labels": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "D",
+    "E",
+    "F",
+    "G",
+    "K",
+    "L",
+    "Y"
+  ],
+  "missing_final_test_classes": [
+    "B",
+    "D",
+    "E",
+    "G",
+    "K",
+    "L"
+  ],
+  "preprocessing": [
+    "grayscale",
+    "resize_20x30",
+    "gaussian_blur_3x3",
+    "otsu_threshold",
+    "white_character_black_background"
+  ]
+}
