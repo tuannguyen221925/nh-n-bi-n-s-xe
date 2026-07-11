@@ -1,0 +1,33 @@
+Bao cao danh gia KNN - Nhom 4
+K = 3
+So mau da gan nhan = 115
+Phan bo nhan:
+- 0: 17
+- 1: 16
+- 2: 12
+- 3: 7
+- 4: 5
+- 5: 16
+- 6: 8
+- 7: 4
+- 8: 4
+- 9: 11
+- A: 3
+- B: 1
+- D: 2
+- E: 1
+- F: 4
+- K: 1
+- L: 1
+- Y: 2
+Accuracy = 0.7241
+So mau sai = 8
+Cac loi nhan dien:
+- 5 -> 0
+- 7 -> 0
+- 0 -> 1
+- D -> 0
+- 6 -> 0
+- 8 -> 0
+- 3 -> 0
+- Y -> 1
