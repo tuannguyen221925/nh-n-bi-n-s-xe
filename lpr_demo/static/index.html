@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nhận diện ký tự biển số — SVM Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar__brand">
+    <span class="topbar__dot"></span>
+    <span class="topbar__name">LPR&nbsp;·&nbsp;SVM</span>
+  </div>
+  <div class="topbar__status" id="modelStatus">
+    <span class="status-dot" id="statusDot"></span>
+    <span id="statusText">Đang kiểm tra model…</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero__text">
+      <p class="eyebrow">Computer Vision · Nhận diện biển số xe</p>
+      <h1>Xem toàn bộ quá trình<br><span class="accent">máy đọc biển số</span></h1>
+      <p class="hero__sub">
+        Tải một ảnh biển số lên. Hệ thống sẽ xử lý theo từng bước —
+        ảnh xám, nhị phân hóa, phát hiện ký tự, cho tới kết quả nhận diện cuối cùng —
+        và hiển thị trực quan từng công đoạn.
+      </p>
+    </div>
+
+    <div class="dropzone" id="dropzone">
+      <div class="dropzone__corner tl"></div>
+      <div class="dropzone__corner tr"></div>
+      <div class="dropzone__corner bl"></div>
+      <div class="dropzone__corner br"></div>
+
+      <div class="dropzone__inner" id="dropzoneInner">
+        <svg class="dropzone__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="12" width="40" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+          <circle cx="24" cy="25" r="7" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 12L18.5 7H29.5L32 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <p class="dropzone__label">Kéo ảnh vào đây hoặc <span>chọn file</span></p>
+        <p class="dropzone__hint">JPG / PNG — nên là ảnh biển số đã crop gọn</p>
+        <input type="file" id="fileInput" accept="image/*" hidden />
+      </div>
+
+      <img id="previewImage" class="dropzone__preview" alt="" hidden />
+      <div class="scan-sweep" id="scanSweep" hidden></div>
+    </div>
+  </section>
+
+  <div class="warning-banner" id="warningBanner" hidden></div>
+
+  <section class="pipeline" id="pipeline" hidden>
+    <p class="pipeline__label">Quy trình xử lý</p>
+    <div class="pipeline__steps" id="pipelineSteps"></div>
+  </section>
+
+  <section class="result" id="resultSection" hidden>
+    <p class="result__label">Kết quả nhận diện</p>
+    <div class="plate-readout" id="plateReadout"></div>
+    <div class="char-strip" id="charStrip"></div>
+    <button class="reset-btn" id="resetBtn">Thử ảnh khác</button>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
